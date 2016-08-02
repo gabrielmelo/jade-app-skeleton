@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     var hr = '----------------------------------------------------\n';
     var bannerFiles = '/*\n' +
         hr+
-        'Blue House - Design & Code\n' +
+        'Gabriel Melo - Jade App Skeleton\n' +
         hr+
         'projeto\t: <%= pkg.name %>\n' +
         'versao\t: <%= pkg.version %>\n' +
@@ -52,7 +52,6 @@ module.exports = function(grunt) {
                 files: ['**/*.jade'],
                 tasks: ['jade']
             }
-            
         },
 
         // jade
@@ -66,7 +65,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'views',
                     src: [ '**/*.jade' ],
-                    dest: '.test',
+                    dest: '/build',
                     ext: '.html'
                 }]
             }
@@ -77,7 +76,7 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     port: 9000,
-                    base: '.test/',
+                    base: '/build',
                     open: true,
                     livereload: true
                 }
@@ -86,5 +85,5 @@ module.exports = function(grunt) {
     });
 
     // Tarefa(s) padrão
-    grunt.registerTask('test', ['jade', 'connect:build','watch']);
+    grunt.registerTask('default', ['jade', 'connect:build','watch']);
 };

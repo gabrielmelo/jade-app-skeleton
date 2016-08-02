@@ -1,0 +1,25 @@
+include ../mixins/mixins.jade
+
+append config
+	//- config.jade
+	include ../config
+
+doctype
+html(lang="pt-BR")
+	head
+		include ../partials/head.jade
+
+	body(class='page page-#{PageLayout}')
+		//header
+		include ../partials/header.jade
+		//end header
+
+		block PageContent
+			// page-main
+			main
+				block PageMain
+			//end page-main
+
+		//footer
+		include ../partials/footer.jade
+		//end footer

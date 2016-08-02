@@ -7,7 +7,7 @@
 
 ### grunt ###
 # Grunt usually compiles files inside this directory
-dist/
+build/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
@@ -64,7 +64,3 @@ jspm_packages
 .vscode/
 tsconfig.json
 jsconfig.json
-
-
-### build ###
-/build
