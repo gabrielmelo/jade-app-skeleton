@@ -63,9 +63,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'views',
+                    cwd: 'app/jadefiles/views',
                     src: [ '**/*.jade' ],
-                    dest: '/build',
+                    dest: 'build',
                     ext: '.html'
                 }]
             }
@@ -76,8 +76,15 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     port: 9000,
-                    base: '/build',
+                    base: {
+                        path: 'build/',
+                        options: {
+                            index: 'home.html',
+                            maxAge: 300000
+                        },
+                    },
                     open: true,
+                    hostname: '*',
                     livereload: true
                 }
             }
