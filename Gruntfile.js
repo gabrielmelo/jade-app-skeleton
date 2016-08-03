@@ -92,5 +92,5 @@ module.exports = function(grunt) {
     });
 
     // Tarefa(s) padrão
-    grunt.registerTask('default', ['jade', 'connect:build','watch']);
+    grunt.registerTask('build', ['jade', 'connect:build','watch']);
 };
