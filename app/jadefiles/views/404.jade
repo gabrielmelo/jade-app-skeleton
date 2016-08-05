@@ -1,9 +1,10 @@
 //- Page Config
 append config
 	- var PageName = "404"
+	- var currentUrl = '/about'
 
 //- layouts
 extends ../layouts/page.jade
 
 block PageMain
-	h1 #{PageLayout}
+	h1 This is Page #{PageName}

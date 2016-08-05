@@ -3,7 +3,8 @@ extends ../layouts/page.jade
 
 //- Page Config
 append config
-	- var PageName = "Homepage"
+	- var PageName = "Page"
+	- var currentUrl = '/page'
 
 block PageMain
-	h1 Page
+	h1 This is Page #{PageName}

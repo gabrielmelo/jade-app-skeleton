@@ -4,9 +4,9 @@ extends ../layouts/single-aside
 //- Page Config
 append config
 	- var PageName = "Single with aside"
+	- var currentUrl = '/single-aside'
 
 block PageMain
-	h1 Single
+	h1 This is Page #{PageName}
 
 block PageAside
-	h2 Sidebar

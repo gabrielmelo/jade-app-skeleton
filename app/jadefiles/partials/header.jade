@@ -6,14 +6,14 @@ header
     nav
         ul
             li
-                a(href="/home.html") Homepage
+                a(class={active: currentUrl === '/home'} href='/home.html') Homepage
             li
-                a(href="/page.html") Page
+                a(class={active: currentUrl === '/single'} href='/single.html') Singlepage
             li
-                a(href="/single.html") Singlepage
+                a(class={active: currentUrl === '/abosingle-asideut'} href='/single-aside.html') Singlepage With Sidebar   
             li
-                a(href="/single-aside.html") Singlepage with aside
+                a(class={active: currentUrl === '/page'} href='/page.html') Page
             li
-                a(href="/about.html") About
+                a(class={active: currentUrl === '/about'} href='/about.html') About
             li
-                a(href="/404.html") 404
+                a(class={active: currentUrl === '/404'} href='/404.html') 404
