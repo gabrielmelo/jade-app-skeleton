@@ -14,7 +14,7 @@ module.exports = function(grunt) {
      * Gera a string com os autores do projeto
      * ------------------------------------------------------
      */
-    var authors   = "";
+    var authors   = "Gabriel Melo";
 
     for( i in packageFile.authors ){
         if( authors == "" ){
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     var hr = '----------------------------------------------------\n';
     var bannerFiles = '/*\n' +
         hr+
-        'Gabriel Melo - Jade App Skeleton\n' +
+        'Jade App Skeleton\n' +
         hr+
         'projeto\t: <%= pkg.name %>\n' +
         'versao\t: <%= pkg.version %>\n' +
@@ -63,9 +63,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'app/jadefiles/views',
+                    cwd: 'views',
                     src: [ '**/*.jade' ],
-                    dest: 'build',
+                    dest: 'test',
                     ext: '.html'
                 }]
             }
@@ -77,11 +77,11 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     base: {
-                        path: 'build/',
+                        path: 'test/',
                         options: {
                             index: 'home.html',
                             maxAge: 300000
-                        },
+                        }
                     },
                     open: true,
                     hostname: '*',
@@ -92,5 +92,5 @@ module.exports = function(grunt) {
     });
 
     // Tarefa(s) padrão
-    grunt.registerTask('build', ['jade', 'connect:build','watch']);
+    grunt.registerTask('test', ['jade', 'connect:build','watch']);
 };
