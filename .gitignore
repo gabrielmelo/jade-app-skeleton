@@ -16,11 +16,6 @@ build/
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-### Sass ###
-.sass-cache/
-*.css.map
-
-
 ### Node ###
 # Logs
 logs
@@ -121,3 +116,5 @@ fabric.properties
 # *.ipr
 
 .idea/
+.test/
+*.DS_Store

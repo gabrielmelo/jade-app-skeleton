@@ -1,31 +1,30 @@
 module.exports = function(grunt) {
-    //    Informa o tempo de execução das tarefas do grunt
+    //  Informa o tempo de execução das tarefas do grunt
     require('time-grunt')(grunt);
 
-    //    Carrega todos modulos do grunt no package.json
+    //  Carrega todos modulos do grunt no package.json
     require('load-grunt-tasks')(grunt);
-
-    var packageFile = grunt.file.readJSON('package.json');
 
     //  Configurações das Tasks
     grunt.initConfig({
-        pkg: packageFile,
-        authors: authors,
-
+        pkg: grunt.file.readJSON('package.json'),
+        
         //  watch
         watch: {
-            options: {
-                livereload: true
-            },
-           
-            jade: {
-                files: ['**/*.jade'],
-                tasks: ['jade']
+            pug: {
+                files: ['**/*.pug'],
+                tasks: ['pug']
             }
         },
 
-        // jade
-        jade: {
+        //  pug
+        pug: {
+            options: {
+                data: function(dest, src) {
+                    return require('data.json');
+                }
+            },
+           
             compile: {
                 options: {
                     client: false,
@@ -34,22 +33,22 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'views',
-                    src: [ '**/*.jade' ],
-                    dest: 'test',
+                    src: [ '**/*.pug' ],
+                    dest: '.test',
                     ext: '.html'
                 }]
             }
         },
 
-        // connect
+        //  connect
         connect: {
             build: {
                 options: {
                     port: 9000,
                     base: {
-                        path: 'test/',
+                        path: '.test/',
                         options: {
-                            index: 'home.html',
+                            index: 'index.html',
                             maxAge: 300000
                         }
                     },
@@ -62,5 +61,5 @@ module.exports = function(grunt) {
     });
 
     // Tarefa(s) padrão
-    grunt.registerTask('test', ['jade', 'connect:build','watch']);
+    grunt.registerTask('default', ['pug', 'connect:build','watch']);
 };
