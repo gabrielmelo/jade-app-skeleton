@@ -45,4 +45,7 @@ jspm_packages
 tsconfig.json
 jsconfig.json
 
+### macOS ###
 *.DS_Store
+.AppleDouble
+.LSOverride
