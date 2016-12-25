@@ -19,12 +19,6 @@ module.exports = function(grunt) {
 
         //  pug
         pug: {
-            options: {
-                data: function(dest, src) {
-                    return require('data.json');
-                }
-            },
-           
             compile: {
                 options: {
                     client: false,
@@ -34,7 +28,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'views',
                     src: [ '**/*.pug' ],
-                    dest: '.test',
+                    dest: 'test',
                     ext: '.html'
                 }]
             }
@@ -46,7 +40,7 @@ module.exports = function(grunt) {
                 options: {
                     port: 9000,
                     base: {
-                        path: '.test/',
+                        path: 'test/',
                         options: {
                             index: 'index.html',
                             maxAge: 300000
