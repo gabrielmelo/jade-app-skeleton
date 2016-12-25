@@ -1,10 +1,6 @@
-# PUG SKELETON
+# PUG boilerplate
 
---
-
-## Infomation
-
-Pug skeleton is a basic front-end structure to create HTML template with Pug.
+Pug boilerplate is a basic front-end structure to create HTML template with Pug.
 
 ### Directory structure
 
