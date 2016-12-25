@@ -1,16 +1,13 @@
 doctype html
 html(lang="pt-BR")
 	head
-		meta(charset="utf-8")
-
-		//- head
-		include ../templates/head.pug
-		
-		block meta
-
 		// Title Page
 		title
 
+		block meta
+			//- head
+			include ../templates/head.pug
+		
 		// Stylesheet
 		block styles
 			link(href="file.css", rel="stylesheet")
