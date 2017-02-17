@@ -1,10 +1,8 @@
-//- //- layouts
-//- extends ../layouts/single.jade
+extends ../layouts/default.pug
 
-//- //- Page Config
-//- append config
-//- 	- var PageName = "Singlepage"
-//- 	- var currentUrl = '/single'
-
-//- block PageMain
-//- 	h1 This is Page #{PageName}
+//- Config
+append config
+	- var Title = "Single"
+	
+block content
+	include ../templates/header.pug

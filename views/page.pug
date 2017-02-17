@@ -1,10 +1,8 @@
-//- //- layouts
-//- extends ../layouts/page.jade
+extends ../layouts/default.pug
 
-//- //- Page Config
-//- append config
-//- 	- var PageName = "Page"
-//- 	- var currentUrl = '/page'
-
-//- block PageMain
-//- 	h1 This is Page #{PageName}
+//- Config
+append config
+	- var Title = "Page"
+	
+block content
+	include ../templates/header.pug
