@@ -1,27 +1,30 @@
 {
-  "name": "pug-boilerplate",
-  "version": "1.0.0",
-  "description": "Pug boilerplate é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gabrielmelo/pug-boilerplate.git"
-  },
-  "keywords": [],
-  "author": "Gabriel Melo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/gabrielmelo/pug-boilerplate/issues"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-connect": "^1.0.0",
-    "grunt-contrib-pug": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^3.2.0",
-    "time-grunt": "^1.2.1"
-  }
+	"name": "pug-boilerplate",
+	"version": "1.0.0",
+	"description": "Pug boilerplate é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --mode=development",
+		"build": "webpack-dev --mode=production",
+		"build:dev": "webpack --mode=development"
+	},
+	"repository": "https://github.com/gabrielmelo/pug-boilerplate.git",
+	"keywords": [],
+	"author": "Gabriel Melo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/gabrielmelo/pug-boilerplate/issues"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.4.0",
+		"@babel/preset-env": "^7.4.2",
+		"babel-loader": "^8.0.5",
+		"html-webpack-plugin": "^3.2.0",
+		"pug": "^2.0.3",
+		"pug-loader": "^2.4.0",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.3.0",
+		"webpack-dev-server": "^3.2.1"
+	}
 }
