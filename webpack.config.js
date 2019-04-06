@@ -1,26 +1,21 @@
-// const HtmlWebpackPlugin = require(‘html-webpack-plugin’);
+const path = require("path");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
-	entry: "./source/scripts/main.js",
-
+const config = {
+	mode: "development",
+	entry: "./source/index.js",
 	output: {
-		path: __dirname + "/public",
+		path: __dirname + "/dist",
 		filename: "bundle.js"
 	},
-
-	devServer: {
-		contentBase: __dirname + "/public"
-	},
-
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader"
-				}
-			}
-		]
-	}
+	plugins: [
+		new CleanWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			template: "./source/index.html",
+			minify: false
+		})
+	]
 };
+
+module.exports = config;
