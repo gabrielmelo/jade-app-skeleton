@@ -15,7 +15,16 @@ const config = {
 			template: "./source/index.html",
 			minify: false
 		})
-	]
+	],
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: "babel-loader"
+			}
+		]
+	}
 };
 
 module.exports = config;
