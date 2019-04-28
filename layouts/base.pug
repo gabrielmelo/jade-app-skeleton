@@ -1,4 +1,4 @@
-include ../config.pug
+include ../config
 
 doctype html
 html(lang="pt-BR")
@@ -9,19 +9,19 @@ html(lang="pt-BR")
 		block meta
 			//- head
 			include ../templates/head.pug
-		
+
 		// Stylesheet
 		block styles
 			link(href="file.css", rel="stylesheet")
-		
+
 	body
 		main
 			block content
-		
+
 		footer
 			block footer
 				include ../templates/footer.pug
-		
+
 		block scripts
 			//- script
 			script(src="file.js")
