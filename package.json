@@ -1,19 +1,26 @@
 {
-	"name": "pug-boilerplate",
+	"name": "pug-web-starter",
 	"version": "2.0.0",
-	"description": "Pug boilerplate é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
+	"description": "Pug Web Starter é um base front-end para escrever modelos HTML rápida e prática com Jade Template Engine.",
 	"main": "index.js",
 	"scripts": {
-		"dev": "webpack-dev-server --mode=development",
-		"build": "webpack-dev --mode=production",
-		"build:dev": "webpack --mode=development"
+		"dev": "",
+		"build": "",
+		"build:dev": ""
 	},
-	"repository": "https://github.com/gabrielmelo/pug-boilerplate.git",
+	"repository": "https://github.com/gabrielmelo/pug-web-starter.git",
 	"keywords": [],
 	"author": "Gabriel Melo",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/gabrielmelo/pug-boilerplate/issues"
+		"url": "https://github.com/gabrielmelo/pug-web-starter/issues"
 	},
-	"devDependencies": {}
+	"devDependencies": {
+		"eslint": "^5.16.0",
+		"eslint-config-airbnb": "17.1.1",
+		"eslint-config-airbnb-base": "^13.2.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.14.2"
+	}
 }
